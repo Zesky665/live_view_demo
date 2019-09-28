@@ -1,5 +1,6 @@
 defmodule LiveViewDemoWeb.Router do
   use LiveViewDemoWeb, :router
+  import Phoenix.LiveView.Router
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -17,8 +18,10 @@ defmodule LiveViewDemoWeb.Router do
   scope "/", LiveViewDemoWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    live "/clock", ClockLive
+    live "/haiku", HaikuLive.Index
+    live "/haiku/new", HaikuLive.New
+    live "/haiku/:id", HaikuLive.Show
+    #resources "/haiku", HaikuController
   end
 
   # Other scopes may use custom stacks.

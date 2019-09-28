@@ -1,0 +1,22 @@
+<%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :save, phx_hook: "SavedForm"] %>
+
+  <%= label f, :line_one %>
+  <%= text_input f, :line_one %>
+  <%= error_tag f, :line_one %>
+
+  <%= label f, :line_two %>
+  <%= text_input f, :line_two %>
+  <%= error_tag f, :line_two %>
+
+  <%= label f, :line_three %>
+  <%= text_input f, :line_three %>
+  <%= error_tag f, :line_three %>
+
+  <%= label f, :author %>
+  <%= text_input f, :author %>
+  <%= error_tag f, :author %>
+
+  <div>
+    <%= submit "Save", phx_disable_with: "Saving..." %>
+  </div>
+</form>
