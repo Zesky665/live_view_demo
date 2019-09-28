@@ -3,12 +3,12 @@ defmodule LiveViewDemoWeb.HaikuLive.Index do
     use Phoenix.HTML
   
     alias LiveViewDemoWeb.HaikuView
-    alias LiveViewDemo.Router.Helpers, as: Routes
+    alias LiveViewDemoWeb.Router.Helpers, as: Routes
     alias LiveViewDemo.Poems
     alias LiveViewDemo.Poems.Haiku
     alias Phoenix.LiveView.Socket
   
-    @tick 10000
+    @tick 14000
 
     def render(assigns) do
       ~L"""
@@ -31,10 +31,10 @@ defmodule LiveViewDemoWeb.HaikuLive.Index do
         
       }
       </style>
-      <%= @tick %>
+ 
       <div style="
-      animation: fade-out 10s infinite;">
-      <h2>Your Haiku</h2>
+      animation: fade-out 14s infinite;
+      animation-delay: -0.5s;">
       <p>
         <%= @haiku.line_one %>
         </br>
@@ -45,6 +45,7 @@ defmodule LiveViewDemoWeb.HaikuLive.Index do
         <p>- <%= @haiku.author %> </p>
       </p>
       </div>
+      <span><%= live_link "New Haiku", to: Routes.live_path(@socket, LiveViewDemoWeb.HaikuLive.New) %></span>
       """
     end
   

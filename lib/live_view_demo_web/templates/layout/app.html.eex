@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header>
-      <section class="container">
-        <nav role="navigation">
-          <ul>
-            <li><a href="https://hexdocs.pm/phoenix/overview.html">Get Started</a></li>
-          </ul>
-        </nav>
-        <a href="http://phoenixframework.org/" class="phx-logo">
-          <img src="<%= Routes.static_path(@conn, "/images/phoenix.png") %>" alt="Phoenix Framework Logo"/>
+    <header style="margin-bottom: 6rem;">
+      <div >
+        <a href="http://phoenixframework.org/">
+          <img src="<%= Routes.static_path(@conn, "/images/icon.svg") %>" style="
+          width: 512px;
+          height: 200px;
+          margin-left: 30%;" 
+          alt="Phoenix Framework Logo"/>
         </a>
-      </section>
     </header>
     <main role="main" class="container">
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
