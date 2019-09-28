@@ -12,7 +12,7 @@ config :live_view_demo,
 
 # Configures the endpoint
 config :live_view_demo, LiveViewDemoWeb.Endpoint,
-  url: [host: System.get_env("HOSTNAME") | "localhost", port: 80],
+  url: [host: System.get_env("HOSTNAME"), port: 80],
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
   render_errors: [view: LiveViewDemoWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: LiveViewDemo.PubSub, adapter: Phoenix.PubSub.PG2],
