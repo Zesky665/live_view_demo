@@ -1,5 +1,0 @@
-<h1>Edit Haiku</h1>
-
-<%= render "form.html", Map.put(assigns, :action, Routes.haiku_path(@conn, :update, @haiku)) %>
-
-<span><%= link "Back", to: Routes.haiku_path(@conn, :index) %></span>
