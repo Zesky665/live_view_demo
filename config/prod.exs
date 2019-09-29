@@ -6,7 +6,7 @@ use Mix.Config
 # Configure your database
 config :live_view_demo, LiveViewDemo.Repo,
   username: "haiku",
-  password: "allhailsatan",
+  password: System.get_env("DB_PASSWORD"),
   database: "haiku_prod",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
