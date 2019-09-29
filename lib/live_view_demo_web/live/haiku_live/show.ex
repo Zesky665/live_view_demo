@@ -3,7 +3,7 @@ defmodule LiveViewDemoWeb.HaikuLive.Show do
     use Phoenix.HTML
   
     alias LiveViewDemoWeb.HaikuView
-    alias LiveViewDemo.Router.Helpers, as: Routes
+    alias LiveViewDemoWeb.Router.Helpers, as: Routes
     alias LiveViewDemo.Poems
     alias LiveViewDemo.Poems.Haiku
     alias Phoenix.LiveView.Socket
@@ -21,7 +21,7 @@ defmodule LiveViewDemoWeb.HaikuLive.Show do
         <p>- <%= @haiku.author %></p>
       </p>
       </br>
-      <a href="localhost:4000/haiku">Go back to home screen</a>
+      <span><%= live_link "Go back to homepage", to: Routes.live_path(@socket, LiveViewDemoWeb.HaikuLive.Index) %></span>
       """
     end
   
