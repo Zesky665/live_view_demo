@@ -3,6 +3,14 @@ use Mix.Config
 # For production, don't forget to configure the url host
 # to something meaningful, Phoenix uses this information
 # when generating URLs.
+# Configure your database
+config :live_view_demo, LiveViewDemo.Repo,
+  username: "haiku",
+  password: "allhailsatan",
+  database: "haiku_prod",
+  hostname: "localhost",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10
 #
 # Note we also include the path to a cache manifest
 # containing the digested version of static files. This
