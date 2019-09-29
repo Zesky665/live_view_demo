@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
   <body>
-    <header style="margin-bottom: 6rem;">
+    <header style="margin-bottom: 2rem;">
       <div >
         <a href="http://phoenixframework.org/">
           <img src="<%= Routes.static_path(@conn, "/images/icon.svg") %>" style="
