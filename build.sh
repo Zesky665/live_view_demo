@@ -13,7 +13,7 @@ rm -rf "_build"
 MIX_ENV=prod mix release
 
 # Run migrations
-_build/prod/rel/render/bin/render eval "Render.Release.migrate"
+_build/prod/rel/live_view_demo/bin/live_view_demo eval "LiveViewDemoWeb.Release.migrate"
 
-chmod a+x bin/render-build
+chmod a+x bin/live_view_demo
 
