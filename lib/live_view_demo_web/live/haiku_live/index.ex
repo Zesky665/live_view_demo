@@ -45,7 +45,7 @@ defmodule LiveViewDemoWeb.HaikuLive.Index do
         <p>- <%= @haiku.author %> </p>
       </p>
       </div>
-      <span><%= live_link "New Haiku", to: Routes.live_path(@socket, LiveViewDemoWeb.HaikuLive.New) %></span>
+      <span><%= live_link "Write one yourself", to: Routes.live_path(@socket, LiveViewDemoWeb.HaikuLive.New) %></span>
       """
     end
   
