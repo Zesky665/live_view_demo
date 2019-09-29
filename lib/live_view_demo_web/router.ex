@@ -18,9 +18,9 @@ defmodule LiveViewDemoWeb.Router do
   scope "/", LiveViewDemoWeb do
     pipe_through :browser
 
-    live "/haiku", HaikuLive.Index
-    live "/haiku/new", HaikuLive.New
-    live "/haiku/:id", HaikuLive.Show
+    live "/", HaikuLive.Index
+    live "/new", HaikuLive.New
+    live "/:id", HaikuLive.Show
     #resources "/haiku", HaikuController
   end
 
