@@ -31,7 +31,7 @@ defmodule LiveViewDemoWeb.HaikuLive.Index do
         
       }
       </style>
- 
+      <h3>Here are some haiku written by users.</h3>
       <div style="
       animation: fade-out 14s infinite;
       animation-delay: -0.5s;">
