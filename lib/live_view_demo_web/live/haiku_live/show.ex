@@ -1,4 +1,7 @@
 defmodule LiveViewDemoWeb.HaikuLive.Show do
+  @moduledoc """
+  The Show live page.
+  """
     use Phoenix.LiveView
     use Phoenix.HTML
   

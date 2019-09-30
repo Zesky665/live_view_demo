@@ -1,4 +1,7 @@
 defmodule LiveViewDemoWeb.HaikuLive.Index do
+@moduledoc """
+  The Index live page.
+  """
     use Phoenix.LiveView
     use Phoenix.HTML
   
@@ -8,7 +11,7 @@ defmodule LiveViewDemoWeb.HaikuLive.Index do
     alias LiveViewDemo.Poems.Haiku
     alias Phoenix.LiveView.Socket
   
-    @tick 14000
+    @tick 14_000
 
     def render(assigns) do
       ~L"""

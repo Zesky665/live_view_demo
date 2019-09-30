@@ -1,4 +1,7 @@
 defmodule LiveViewDemo.Poems.Haiku do
+  @moduledoc """
+  The Haiku schema. 
+  """
   use Ecto.Schema
   import Ecto.Changeset
 
@@ -25,10 +28,6 @@ defmodule LiveViewDemo.Poems.Haiku do
   defp validate_syllables(changeset, field, value) do 
 
     validate_change(changeset, field, fn (current_field, field_value) ->
-      IO.inspect "!!!!!!!!!"
-      IO.inspect field_value
-      IO.inspect count_syllables(field_value)
-      IO.inspect "!!!!!!!!!"
       if count_syllables(field_value) === value do
         []
       else 

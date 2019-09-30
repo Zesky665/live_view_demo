@@ -37,10 +37,6 @@ defmodule LiveViewDemo.Poems do
 
     test = Repo.all(query)
 
-    IO.inspect test
-
-    IO.inspect Enum.at(test, 0)
-    
     Enum.at(test, 0)
   end
 

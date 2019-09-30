@@ -1,4 +1,7 @@
 defmodule LiveViewDemoWeb.HaikuLive.New do
+  @moduledoc """
+  The New live page. Haiku are validated in real time here. 
+  """
   use Phoenix.LiveView
   import Calendar.Strftime
 

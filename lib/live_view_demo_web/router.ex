@@ -21,7 +21,6 @@ defmodule LiveViewDemoWeb.Router do
     live "/", HaikuLive.Index
     live "/new", HaikuLive.New
     live "/:id", HaikuLive.Show
-    #resources "/haiku", HaikuController
   end
 
   # Other scopes may use custom stacks.
