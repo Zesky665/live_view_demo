@@ -1,14 +1,14 @@
 <%= f = form_for @changeset, "#", [phx_change: :validate, phx_submit: :save, phx_hook: "SavedForm"] %>
 
-  <%= label f, :line_one %>
+  <%= label f, :line_one, "Line One - 5 syllables" %>
   <%= text_input f, :line_one %>
   <%= error_tag f, :line_one %>
 
-  <%= label f, :line_two %>
+  <%= label f, :line_two, "Line Two - 7 syllables" %>
   <%= text_input f, :line_two %>
   <%= error_tag f, :line_two %>
 
-  <%= label f, :line_three %>
+  <%= label f, :line_three, "Line Three - 5 syllables"%>
   <%= text_input f, :line_three %>
   <%= error_tag f, :line_three %>
 

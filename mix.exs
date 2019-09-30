@@ -59,8 +59,7 @@ defmodule LiveViewDemo.MixProject do
     [
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate", "test"],
-      "phx.start": ["ecto.reset","ANOTHER_SECRET_KEY_BASE=`mix phx.gen.secret` SECRET_KEY_BASE=`mix phx.gen.secret`  mix phx.server"]
+      test: ["ecto.create --quiet", "ecto.migrate", "test"]
     ]
   end
 end
