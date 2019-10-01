@@ -14,15 +14,21 @@ defmodule LiveViewDemo.Poems.Haiku do
     timestamps()
   end
 
-  @test  ~r/^[A-Za-z]+$/
-  @syllable_regex_one ~r/[aiouy]+e*|e(?!d$|ly).|[td]ed|le$/
-  @syllable_regex_two ~r/[aeiouy]+[^$e(,.:;!?)]/
-  @syllable_regex_three ~r/[AaEeIiOoUuYy]{1,2}/
-  @syllable_regex_four ~r/[bcdfghjklmnpqrstvwxz]*[aeiouy]+[bcdfghjklmnpqrstvwxz]*/
+  @syllable_regex ~r/[AaEeIiOoUuYy]{1,2}/
 
+  @doc """
+  Returns the number of syllables in a string. 
+
+  ## Examples
+
+      iex> count_syllables("Test")
+      1
+
+  """
+  
   defp count_syllables(string) do
     cleaned_string = Regex.replace(~r/[e]+[ ]|e$/, string, " ")
-    Regex.scan(@syllable_regex_three, cleaned_string) |> Enum.count
+    Regex.scan(@syllable_regex, cleaned_string) |> Enum.count
   end
 
   defp validate_syllables(changeset, field, value) do 
